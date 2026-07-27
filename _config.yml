@@ -114,10 +114,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Root Creative"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
+  bio              : "Professional Services and Odoo Partner."
+  location         : "Kenya"
   email            :
   # fediverse      : "@you@instance.social"  # used for fediverse:creator meta tag
   links:
