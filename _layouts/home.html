@@ -3,19 +3,111 @@ layout: archive
 ---
 {%- assign locale = page.locale | default: layout.locale | default: site.locale %}
 
+{% assign hero_title = page.hero_title | default: page.title | default: "Professional services for ambitious teams" %}
+{% assign hero_excerpt = page.hero_excerpt | default: "We help founders and teams turn big ideas into clear strategy, thoughtful design, and reliable digital products." %}
+{% assign hero_cta_label = page.hero_cta_label | default: "Book a discovery call" %}
+{% assign hero_cta_url = page.hero_cta_url | default: "mailto:hello@rootcreative.com" %}
+{% assign services = page.feature_row | default: nil %}
+
 {{ content }}
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[locale].recent_posts | default: "Recent Posts" }}</h3>
+<section class="home-landing">
+  <div class="home-landing__hero">
+    <p class="home-landing__eyebrow">Root Creative</p>
+    <h1>{{ hero_title }}</h1>
+    <p class="home-landing__excerpt">{{ hero_excerpt }}</p>
+    <a href="{{ hero_cta_url }}" class="home-landing__cta">{{ hero_cta_label }}</a>
+  </div>
 
-{% if paginator %}
-  {% assign posts = paginator.posts %}
-{% else %}
-  {% assign posts = site.posts %}
-{% endif %}
+  {% if services.size > 0 %}
+    <div class="home-landing__grid">
+      {% for service in services %}
+        <article class="home-landing__pane">
+          <h2>{{ service.title }}</h2>
+          <p>{{ service.excerpt }}</p>
+          {% if service.url %}
+            <a href="{{ service.url }}">{{ service.btn_label | default: "Learn more" }}</a>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
+  {% endif %}
+</section>
 
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
-  {% include documents-collection.html locale=locale entries=posts type=entries_layout %}
-</div>
+<style>
+  .home-landing {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem 0 3rem;
+  }
 
-{% include paginator.html locale=locale %}
+  .home-landing__hero {
+    background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+    color: #fff;
+    border-radius: 1.25rem;
+    padding: 2.5rem;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+  }
+
+  .home-landing__eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.8rem;
+    opacity: 0.8;
+    margin-bottom: 0.8rem;
+  }
+
+  .home-landing__hero h1 {
+    margin: 0 0 0.75rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+  }
+
+  .home-landing__excerpt {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+    max-width: 44rem;
+  }
+
+  .home-landing__cta {
+    display: inline-block;
+    background: #fff;
+    color: #111827;
+    padding: 0.8rem 1.1rem;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .home-landing__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .home-landing__pane {
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  }
+
+  .home-landing__pane h2 {
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+    font-size: 1.15rem;
+  }
+
+  .home-landing__pane p {
+    line-height: 1.7;
+    margin-bottom: 0.9rem;
+  }
+
+  .home-landing__pane a {
+    font-weight: 600;
+    color: #2563eb;
+    text-decoration: none;
+  }
+</style>
