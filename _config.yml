@@ -19,7 +19,7 @@ locale                   : "en-US"
 direction                : # "ltr" (default), "rtl" # set the direction of the page
 title                    : "Root Creative"
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
+subtitle                 : "Professial services" # site tagline that appears below site title in masthead
 name                     : "Root Creative"
 description              : "Professional Services and Odoo Partenr"
 url                      : "https://rootcreative.net" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -143,13 +143,13 @@ author:
 # Site Footer
 footer:
   links:
-    - label: "Twitter"
+    - label: "X"
       icon: "fab fa-fw fa-square-x-twitter"
-      # url:
+      url: https://x.com/rootcreativenet
       # rel: "me"  # optional: adds rel attribute (e.g. for IndieWeb web sign-in)
     - label: "Facebook"
       icon: "fab fa-fw fa-square-facebook"
-      # url:
+      url: https://www.facebook.com/profile.php?id=61588709890594
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       # url:
@@ -161,7 +161,10 @@ footer:
       # url:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url:
+      url: https://www.instagram.com/rootcreativenet/
+    - label: "Tiktok"
+      icon: "fab fa-fw fa-tiktok"
+      url: https://www.tiktok.com/@rootcreative.net
   since: "2023"
 
 
