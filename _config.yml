@@ -19,9 +19,9 @@ locale                   : "en-US"
 direction                : # "ltr" (default), "rtl" # set the direction of the page
 title                    : "Root Creative"
 title_separator          : "-"
-subtitle                 : "Professial services" # site tagline that appears below site title in masthead
+subtitle                 : "Professial services and Odoo Partner" # site tagline that appears below site title in masthead
 name                     : "Root Creative"
-description              : "Professional Services and Odoo Partenr"
+description              : "Professional Services and Odoo Partner"
 url                      : "https://rootcreative.net" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
