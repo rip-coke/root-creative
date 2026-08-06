@@ -5,17 +5,6 @@
 .archive {
   margin-top: 1em;
   margin-bottom: 2em;
-
-  @include breakpoint($large) {
-    float: inline-end;
-    width: calc(100% - #{$right-sidebar-width-narrow});
-    padding-inline-end: $right-sidebar-width-narrow;
-  }
-
-  @include breakpoint($x-large) {
-    width: calc(100% - #{$right-sidebar-width});
-    padding-inline-end: $right-sidebar-width;
-  }
 }
 
 .archive__item {
@@ -131,20 +120,6 @@
 /*
    Grid view
    ========================================================================== */
-
-.archive {
-  .grid__wrapper {
-    /* extend grid elements to the right */
-
-    @include breakpoint($large) {
-      margin-inline-end: -1 * $right-sidebar-width-narrow;
-    }
-
-    @include breakpoint($x-large) {
-      margin-inline-end: -1 * $right-sidebar-width;
-    }
-  }
-}
 
 .grid__item {
   margin-bottom: 2em;
