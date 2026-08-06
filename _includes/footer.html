@@ -21,7 +21,7 @@
       <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}"><i class="fas fa-fw fa-square-rss" aria-hidden="true"></i> {{ site.data.ui-text[locale].feed_label | default: "Feed" }}</a></li>
     {% endunless %}
 
-    <li><a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ site.partner | relative_url }}" alt="Odoo Partner"></a></li>
+    <li style="float: right; padding-top: 0"><a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ site.partner | relative_url }}" alt="Odoo Partner"></a></li>
   </ul>
 </div>
 {% endif %}
