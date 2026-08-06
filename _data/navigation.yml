@@ -10,3 +10,11 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+  - title: "Contact"
+    url: /contact/
+  - title: "Product"
+    url: /product/
+  - title: "Design"
+    url: /design/
+  - title: "Development"
+    url: /development/
